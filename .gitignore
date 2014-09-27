@@ -9,8 +9,10 @@ Berksfile.lock
 
 # Bundler
 Gemfile.lock
-bin/*
 .bundle/*
 
 .kitchen/
 .kitchen.local.yml
+
+# Virtualenv
+venv

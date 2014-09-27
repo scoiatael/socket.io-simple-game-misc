@@ -99,3 +99,8 @@ end
 service "supervisord" do
   action [ :start, :enable ]
 end
+
+bash "set ownership of files" do
+  cwd '/home/server'
+  code 'chmod o+w,o+r,o+x -R ./'
+end

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+ROOT=$( cd `dirname $0` && cd ../ && pwd )
+VIRTUALENV=/usr/bin/virtualenv2
+NAME=venv
+PKGS=fabric
+
+GREEN="\033[1;32m"
+RED="\033[1;31m"
+NO_COLOUR="\033[0m"
+
+cd $ROOT
+echo "Creating "$ROOT/$NAME".."
+( [ ! -d $NAME ] && $VIRTUALENV $NAME ) || echo -e "$RED FAIL $NO_COLOUR already exists"
+echo "Installing $PKGS"
+$ROOT/$NAME/bin/pip install $PKGS
