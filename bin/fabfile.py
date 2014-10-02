@@ -14,8 +14,8 @@ paths = {
     'vagrant' : "../vagrant/",
     'venv' : "../venv/",
     'repos' : [
-      '../../../Public/socket.io-simple-game-server',
-      '../../../Public/socket.io-simple-game-client'
+      '../../socket.io-simple-game-server',
+      '../../socket.io-simple-game-client'
       ]
     },
   'remote': {
@@ -56,7 +56,7 @@ def push_to(target='origin'):
             print(' ..tags..')
             local('git push --tags %s' % target)
           else:
-            print("Repo %s at %s not found; %s" % 
+            print("Repo %s at %s not found; %s" %
                     ( target, path, result.stderr ))
 
 def push():
